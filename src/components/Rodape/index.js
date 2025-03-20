@@ -1,5 +1,5 @@
 
-import './Rodape.css'
+import './rodape.css'
 
 const Rodape = () => {
     return (<footer className="footer">
