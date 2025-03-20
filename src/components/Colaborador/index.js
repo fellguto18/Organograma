@@ -1,7 +1,7 @@
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
-import './colaborador.css'
+import './Colaborador.css'
 
 const Colaborador = ({ colaborador, corDeFundo, aoDeletar,aoFavoritar }) => {
     function favoritar(){
