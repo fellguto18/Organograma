@@ -5,6 +5,7 @@ import Rodape from "./components/Rodape";
 import Time from "./components/Time";
 import { v4 as uuidv4 } from 'uuid';
 
+
 function App() {
 
   const [times, setTImes] = useState([
@@ -237,7 +238,7 @@ function App() {
       cargo: 'Hipster e CEO da Alura',
       imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       time: times[5].nome
-    },
+    }
   ]
 
   const [colaboradores, setColaboradores] = useState(inicial)
