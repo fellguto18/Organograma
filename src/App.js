@@ -4,6 +4,7 @@ import Formulario from "./components/Formulario";
 import Rodape from "./components/Rodape";
 import Time from "./components/Time";
 import { v4 as uuidv4 } from 'uuid';
+import { FaWpforms } from "react-icons/fa";
 
 
 function App() {
@@ -242,6 +243,9 @@ function App() {
   ]
 
   const [colaboradores, setColaboradores] = useState(inicial)
+
+  const[mostrarFormulario, setMostrarFormulario] = useState(false)
+
   
   function deletarColaborador(id){
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
@@ -267,16 +271,26 @@ function App() {
     }))
   }
 
+  const manipularFormulario = () =>{
+    setMostrarFormulario(!mostrarFormulario);
+  }
+
   return (
     <div>
       <Banner />
-      <Formulario
+      {mostrarFormulario &&(
+        <Formulario
         cadastrarTime={cadastrarTime} 
         times={times.map(time => time.nome)} 
         aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} 
-      />
+        />
+      )}
+
+
       <section className="times">
         <h1>Minha organização</h1>
+        <FaWpforms size={40} className="botao-formulario"  onClick={manipularFormulario}/>
+    
         {times.map((time, indice) => 
         <Time 
           aoFavoritar={resolverFavorito}

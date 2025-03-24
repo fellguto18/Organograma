@@ -8,7 +8,18 @@ body {
 }
 
 .times {
-  text-align: center;
+    text-align: center;
+}
+
+.times .faixa{
+  display: flex;
+  justify-content: center;
+}
+.botao-formulario{
+  border-radius: 25px;
+  padding: 5px;
+  border: solid white;
+  background-color: #6278F7;
 }
 
 h1 {
